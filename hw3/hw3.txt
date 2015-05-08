@@ -1,0 +1,44 @@
+# Maria Martinez
+# CS 4320 - Spring '15
+# 04/23/2015
+
+*** Settings ***
+Library         Process
+Library			OperatingSystem
+
+*** Variables ***
+@{choices}           0    1    2    -1
+${RESULT}
+${EXPECTED}
+
+*** Keywords ***
+${RESULT}
+    [Arguments]     ${TEXT}
+    log             ${TEXT}
+
+*** Test Cases ***
+# loops through the choices to pass in as parameters
+# it doesn't actually accept the parameter as an option but
+# this was a good test to use a for loop
+TestMenuCommands
+    : FOR    ${item}    IN    @{choices}
+    \    ${RESULT}=  Run Process                    ./main < ${item}          shell=True
+    \    ${RESULT}=  Should Be Equal As Integers    ${RESULT.rc}              1
+
+# test to add a player and verifies that the result matches the output
+TestAddPlayer
+    ${RESULT}=       Run Process         ./main < addPlayerInput.txt          shell=True
+    ${EXPECTED}=     Get File            addPlayerOutput.txt
+    Should Match     ${RESULT.stdout}    ${EXPECTED}
+
+# test to display all the players and verifies that the result matches the output
+TestDisplayPlayer
+    ${RESULT}=       Run Process         ./main < displayPlayerInput.txt      shell=True
+    ${EXPECTED}=     Get File            displayPlayerOutput.txt
+    Should Match     ${RESULT.stdout}    ${EXPECTED}
+
+# test an invalid entry and verifies that the result matches the output
+TestInvalidChoice
+    ${RESULT}=       Run Process         ./main < invalidInput.txt            shell=True
+    ${EXPECTED}=     Get File            invalidOutput.txt
+    Should Match     ${RESULT.stdout}    ${EXPECTED}

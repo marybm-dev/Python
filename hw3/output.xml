@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20150424 12:10:05.770" generator="Robot 2.8.7 (Python 2.7.9 on darwin)">
+<suite source="/Users/mlmartinez85/Desktop/robot/hw3.txt" id="s1" name="Hw3">
+<test id="s1-t1" name="TestMenuCommands">
+<kw type="for" name="${item} IN [ @{choices} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${item} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${RESULT} = Process.Run Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>./main &lt; ${item}</arg>
+<arg>shell=True</arg>
+</arguments>
+<msg timestamp="20150424 12:10:05.804" level="INFO">Starting process:
+./main &lt; 0</msg>
+<msg timestamp="20150424 12:10:05.806" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20150424 12:10:05.808" level="INFO">Process completed.</msg>
+<msg timestamp="20150424 12:10:05.808" level="INFO">${RESULT} = &lt;result object with rc 1&gt;</msg>
+<status status="PASS" endtime="20150424 12:10:05.808" starttime="20150424 12:10:05.804"></status>
+</kw>
+<kw type="kw" name="${RESULT} = BuiltIn.Should Be Equal As Integers">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${RESULT.rc}</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20150424 12:10:05.809" level="INFO">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20150424 12:10:05.809" level="INFO">${RESULT} = None</msg>
+<status status="PASS" endtime="20150424 12:10:05.809" starttime="20150424 12:10:05.808"></status>
+</kw>
+<status status="PASS" endtime="20150424 12:10:05.809" starttime="20150424 12:10:05.804"></status>
+</kw>
+<kw type="foritem" name="${item} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${RESULT} = Process.Run Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>./main &lt; ${item}</arg>
+<arg>shell=True</arg>
+</arguments>
+<msg timestamp="20150424 12:10:05.809" level="INFO">Starting process:
+./main &lt; 1</msg>
+<msg timestamp="20150424 12:10:05.811" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20150424 12:10:05.813" level="INFO">Process completed.</msg>
+<msg timestamp="20150424 12:10:05.813" level="INFO">${RESULT} = &lt;result object with rc 1&gt;</msg>
+<status status="PASS" endtime="20150424 12:10:05.813" starttime="20150424 12:10:05.809"></status>
+</kw>
+<kw type="kw" name="${RESULT} = BuiltIn.Should Be Equal As Integers">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${RESULT.rc}</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20150424 12:10:05.814" level="INFO">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20150424 12:10:05.814" level="INFO">${RESULT} = None</msg>
+<status status="PASS" endtime="20150424 12:10:05.814" starttime="20150424 12:10:05.814"></status>
+</kw>
+<status status="PASS" endtime="20150424 12:10:05.814" starttime="20150424 12:10:05.809"></status>
+</kw>
+<kw type="foritem" name="${item} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${RESULT} = Process.Run Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>./main &lt; ${item}</arg>
+<arg>shell=True</arg>
+</arguments>
+<msg timestamp="20150424 12:10:05.815" level="INFO">Starting process:
+./main &lt; 2</msg>
+<msg timestamp="20150424 12:10:05.817" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20150424 12:10:05.818" level="INFO">Process completed.</msg>
+<msg timestamp="20150424 12:10:05.819" level="INFO">${RESULT} = &lt;result object with rc 1&gt;</msg>
+<status status="PASS" endtime="20150424 12:10:05.819" starttime="20150424 12:10:05.814"></status>
+</kw>
+<kw type="kw" name="${RESULT} = BuiltIn.Should Be Equal As Integers">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${RESULT.rc}</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20150424 12:10:05.819" level="INFO">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20150424 12:10:05.819" level="INFO">${RESULT} = None</msg>
+<status status="PASS" endtime="20150424 12:10:05.819" starttime="20150424 12:10:05.819"></status>
+</kw>
+<status status="PASS" endtime="20150424 12:10:05.820" starttime="20150424 12:10:05.814"></status>
+</kw>
+<kw type="foritem" name="${item} = -1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${RESULT} = Process.Run Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>./main &lt; ${item}</arg>
+<arg>shell=True</arg>
+</arguments>
+<msg timestamp="20150424 12:10:05.820" level="INFO">Starting process:
+./main &lt; -1</msg>
+<msg timestamp="20150424 12:10:05.822" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20150424 12:10:05.824" level="INFO">Process completed.</msg>
+<msg timestamp="20150424 12:10:05.824" level="INFO">${RESULT} = &lt;result object with rc 1&gt;</msg>
+<status status="PASS" endtime="20150424 12:10:05.824" starttime="20150424 12:10:05.820"></status>
+</kw>
+<kw type="kw" name="${RESULT} = BuiltIn.Should Be Equal As Integers">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${RESULT.rc}</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20150424 12:10:05.825" level="INFO">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20150424 12:10:05.825" level="INFO">${RESULT} = None</msg>
+<status status="PASS" endtime="20150424 12:10:05.825" starttime="20150424 12:10:05.824"></status>
+</kw>
+<status status="PASS" endtime="20150424 12:10:05.825" starttime="20150424 12:10:05.820"></status>
+</kw>
+<status status="PASS" endtime="20150424 12:10:05.825" starttime="20150424 12:10:05.803"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150424 12:10:05.825" critical="yes" starttime="20150424 12:10:05.803"></status>
+</test>
+<test id="s1-t2" name="TestAddPlayer">
+<kw type="kw" name="${RESULT} = Process.Run Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>./main &lt; addPlayerInput.txt</arg>
+<arg>shell=True</arg>
+</arguments>
+<msg timestamp="20150424 12:10:05.826" level="INFO">Starting process:
+./main &lt; addPlayerInput.txt</msg>
+<msg timestamp="20150424 12:10:05.828" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20150424 12:10:05.831" level="INFO">Process completed.</msg>
+<msg timestamp="20150424 12:10:05.831" level="INFO">${RESULT} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20150424 12:10:05.831" starttime="20150424 12:10:05.826"></status>
+</kw>
+<kw type="kw" name="${EXPECTED} = OperatingSystem.Get File">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>addPlayerOutput.txt</arg>
+</arguments>
+<msg timestamp="20150424 12:10:05.832" html="yes" level="INFO">Getting file '&lt;a href="file:///Users/mlmartinez85/Desktop/robot/addPlayerOutput.txt"&gt;/Users/mlmartinez85/Desktop/robot/addPlayerOutput.txt&lt;/a&gt;'</msg>
+<msg timestamp="20150424 12:10:05.832" level="INFO">${EXPECTED} = Welcome to Depth Chart Manager 0.01
+Please choose one of the following: 
+0. Quit program
+1. Add to position
+2. Display depth chart
+Please enter the player's first name: Please enter the player's last ...</msg>
+<status status="PASS" endtime="20150424 12:10:05.832" starttime="20150424 12:10:05.832"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Match">
+<doc>Fails unless the given `string` matches the given `pattern`.</doc>
+<arguments>
+<arg>${RESULT.stdout}</arg>
+<arg>${EXPECTED}</arg>
+</arguments>
+<status status="PASS" endtime="20150424 12:10:05.834" starttime="20150424 12:10:05.832"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150424 12:10:05.834" critical="yes" starttime="20150424 12:10:05.825"></status>
+</test>
+<test id="s1-t3" name="TestDisplayPlayer">
+<kw type="kw" name="${RESULT} = Process.Run Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>./main &lt; displayPlayerInput.txt</arg>
+<arg>shell=True</arg>
+</arguments>
+<msg timestamp="20150424 12:10:05.835" level="INFO">Starting process:
+./main &lt; displayPlayerInput.txt</msg>
+<msg timestamp="20150424 12:10:05.837" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20150424 12:10:05.839" level="INFO">Process completed.</msg>
+<msg timestamp="20150424 12:10:05.840" level="INFO">${RESULT} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20150424 12:10:05.840" starttime="20150424 12:10:05.834"></status>
+</kw>
+<kw type="kw" name="${EXPECTED} = OperatingSystem.Get File">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>displayPlayerOutput.txt</arg>
+</arguments>
+<msg timestamp="20150424 12:10:05.840" html="yes" level="INFO">Getting file '&lt;a href="file:///Users/mlmartinez85/Desktop/robot/displayPlayerOutput.txt"&gt;/Users/mlmartinez85/Desktop/robot/displayPlayerOutput.txt&lt;/a&gt;'</msg>
+<msg timestamp="20150424 12:10:05.840" level="INFO">${EXPECTED} = Welcome to Depth Chart Manager 0.01
+Please choose one of the following: 
+0. Quit program
+1. Add to position
+2. Display depth chart
+PG:
+
+SG:
+
+SF:
+
+PF:
+
+C:
+
+Please choose one of the following: 
+0. Quit ...</msg>
+<status status="PASS" endtime="20150424 12:10:05.840" starttime="20150424 12:10:05.840"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Match">
+<doc>Fails unless the given `string` matches the given `pattern`.</doc>
+<arguments>
+<arg>${RESULT.stdout}</arg>
+<arg>${EXPECTED}</arg>
+</arguments>
+<status status="PASS" endtime="20150424 12:10:05.841" starttime="20150424 12:10:05.840"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150424 12:10:05.842" critical="yes" starttime="20150424 12:10:05.834"></status>
+</test>
+<test id="s1-t4" name="TestInvalidChoice">
+<kw type="kw" name="${RESULT} = Process.Run Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>./main &lt; invalidInput.txt</arg>
+<arg>shell=True</arg>
+</arguments>
+<msg timestamp="20150424 12:10:05.842" level="INFO">Starting process:
+./main &lt; invalidInput.txt</msg>
+<msg timestamp="20150424 12:10:05.844" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20150424 12:10:05.847" level="INFO">Process completed.</msg>
+<msg timestamp="20150424 12:10:05.847" level="INFO">${RESULT} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20150424 12:10:05.847" starttime="20150424 12:10:05.842"></status>
+</kw>
+<kw type="kw" name="${EXPECTED} = OperatingSystem.Get File">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>invalidOutput.txt</arg>
+</arguments>
+<msg timestamp="20150424 12:10:05.848" html="yes" level="INFO">Getting file '&lt;a href="file:///Users/mlmartinez85/Desktop/robot/invalidOutput.txt"&gt;/Users/mlmartinez85/Desktop/robot/invalidOutput.txt&lt;/a&gt;'</msg>
+<msg timestamp="20150424 12:10:05.848" level="INFO">${EXPECTED} = Welcome to Depth Chart Manager 0.01
+Please choose one of the following: 
+0. Quit program
+1. Add to position
+2. Display depth chart
+Please choose one of the following: 
+0. Quit program
+1. Add to positi...</msg>
+<status status="PASS" endtime="20150424 12:10:05.848" starttime="20150424 12:10:05.848"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Match">
+<doc>Fails unless the given `string` matches the given `pattern`.</doc>
+<arguments>
+<arg>${RESULT.stdout}</arg>
+<arg>${EXPECTED}</arg>
+</arguments>
+<status status="PASS" endtime="20150424 12:10:05.849" starttime="20150424 12:10:05.848"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150424 12:10:05.849" critical="yes" starttime="20150424 12:10:05.842"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150424 12:10:05.849" starttime="20150424 12:10:05.771"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="4" id="s1" name="Hw3">Hw3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

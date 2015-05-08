@@ -1,0 +1,11 @@
+*** Settings ***
+Library         Process
+Library			OperatingSystem
+
+*** Test Cases ***
+Positive+Negative
+    ${RESULT}=      Run Process         add < in1.txt       shell=True
+    Log to Console  Ran program
+    ${EXPECTED}=    Get File            out1.txt
+    Log to Console  Got expected output
+    Should Match    ${RESULT.stdout}    ${EXPECTED}
